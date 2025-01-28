@@ -6,7 +6,7 @@ from func import calculate_metrics
 from visualization import create_pie_chart, create_treemaps, create_funnel_chart, create_plot_average_by_group
 
 # Load the data
-df = pd.read_csv('data/sleep_health.csv')
+df = pd.read_csv('sleep_health.csv')
 
 # Set the page layout to wide
 st.set_page_config(layout="wide")
