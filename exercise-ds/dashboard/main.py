@@ -4,7 +4,7 @@ import streamlit_shadcn_ui as ui
 
 from func import calculate_metrics
 from visualization import create_pie_chart
-from visualization import create_treemaps
+from visualization import create_treemap
 from visualization import create_funnel_chart
 from visualization import create_plot_average_by_group
 
