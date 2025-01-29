@@ -42,7 +42,7 @@ for i, metric in enumerate(metrics):
 first_visual = st.columns(3)
 first_visual[0].plotly_chart(create_pie_chart(filtered_df, "gender", "Gender", hole=0.4))
 first_visual[1].plotly_chart(create_funnel_chart(filtered_df, column="blood_pressure_category", label="Blood Pressure"))
-first_visual[2].plotly_chart(create_pie_chart(filtered_df, column="bmi_category", label="BMI"))
+first_visual[2].plotly_chart(create_pie_chart(filtered_df, column="bmi_category", label="BMI", hole=0))
 
 # Display second visual column
 second_visual = st.columns(2)
