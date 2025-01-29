@@ -55,7 +55,7 @@ df_visual["gender"] = df_visual["gender"].map(gender_icons)
 df_visual["sleep_disorder"] = df_visual["sleep_disorder"].apply(lambda x: True if x != "No Issue" else False)
 df_visual.drop(["age_group", "blood_pressure_category"], axis=1, inplace=True)
 
-second_visual[0].plotly_chart(create_treemapz(df_visual, "occupation", "Job"))
+second_visual[0].plotly_chart(create_treemapz(df_visual, column="occupation", label="Job"))
 with second_visual[1]:
     st.markdown("**DataFrame Version**")
     st.dataframe(df_visual, column_config={
