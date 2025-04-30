@@ -43,7 +43,7 @@ Ada beberapa hal yang harus dilakukan untuk mempersiapkan data agar dapat diolah
 
 **Tahap persiapan data dilakukan sebagai berikut**: 
 - Terdapat 5.062 film yang tidak memiliki genre (no genres listed). Karena jumlahnya yang tidak signifikan maka dapat di drop.
-- Karena keterbatasan RAM dari perangkat yang digunakan, film yang digunakan dibatasi hanya 50.000 film.
+- Karena keterbatasan RAM dari perangkat yang digunakan, film yang digunakan dibatasi hanya 20.000 film.
 
 
 ## Modeling
@@ -56,9 +56,9 @@ Sistem rekomendasi film dibuat menggunakan pendekatan Content Based Filtering. P
 - Kelebihan pendekatan ini adalah kesederhanaannya yang tetap memberikan hasil optimal.
 
 ## Evaluation
-Dilakukan pengujian menggunkan film  Toy Story (1995) dengan genres Adventure|Animation|Children|Comedy|Fantasy. Rekomendasi yg diberikan adalah Emperor's New Groove, The (2000),  Adventures of Rocky and Bullwinkle, The (2000), Trolls Holiday (2017), Shrek the Third (2007), Monsters, Inc. (2001). Seluruh hasil rekomendasi meiliki genre yang sama dengan film Toy Story (1995).
+Dilakukan pengujian menggunkan film  Toy Story (1995) dengan genres Adventure|Animation|Children|Comedy|Fantasy. Rekomendasi yg diberikan adalah Shrek the Third (2007),  Asterix and the Vikings (Astérix et les Vikings) (2006), DuckTales: The Movie - Treasure of the Lost Lamp (1990), Emperor's New Groove, The (2000), 	Wild, The (2006). Seluruh hasil rekomendasi meiliki genre yang sama dengan film Toy Story (1995).
 
-Pengujian kedua dilakukan dengan film Waiting to Exhale (1995) dengan genres Comedy|Drama|Romance. Rekomendasi yang diberikan adalah Magic in the Moonlight (2014), Drinking Buddies (2013), Knocked Up (2007), Happy Event, A (Un Heureux Evénement) (2011), School for Seduction (2004). Seluruh hasil rekomendasi memiliki genre yang sama dengan film Waiting to Exhale (1995)
+Pengujian kedua dilakukan dengan film Waiting to Exhale (1995) dengan genres Comedy|Drama|Romance. Rekomendasi yang diberikan adalah Kal Ho Naa Ho (2003), Walking and Talking (1996), Creator (1985), Racing with the Moon (1984), Last Holiday (1950). Seluruh hasil rekomendasi memiliki genre yang sama dengan film Waiting to Exhale (1995)
 
 Berdasarkan Dua kali pengujian tersebut dapat disimpulkan bahwa model yang dhaslkan memiliki kaurasi 100%.
 
