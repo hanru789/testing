@@ -60,7 +60,7 @@ Dilakukan pengujian menggunkan film  Toy Story (1995) dengan genres Adventure|An
 
 Pengujian kedua dilakukan dengan film Waiting to Exhale (1995) dengan genres Comedy|Drama|Romance. Rekomendasi yang diberikan adalah Kal Ho Naa Ho (2003), Walking and Talking (1996), Creator (1985), Racing with the Moon (1984), Last Holiday (1950). Seluruh hasil rekomendasi memiliki genre yang sama dengan film Waiting to Exhale (1995)
 
-Berdasarkan Dua kali pengujian tersebut dapat disimpulkan bahwa model yang dhaslkan memiliki kaurasi 100%.
+Berdasarkan Dua kali pengujian tersebut dapat disimpulkan bahwa model yang dhaslkan memiliki akurasi 100%.
 
 
 ## Reverences
