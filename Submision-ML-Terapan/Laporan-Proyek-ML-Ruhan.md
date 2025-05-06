@@ -63,16 +63,43 @@ Ada beberapa hal yang harus dilakukan untuk mempersiapkan data agar dapat diolah
 **Tahap persiapan data dilakukan sebagai berikut**: 
 - Terdapat 5.062 film yang tidak memiliki genre (no genres listed). Karena jumlahnya yang tidak signifikan maka dapat di drop.
 - Karena keterbatasan RAM dari perangkat yang digunakan, film yang digunakan dibatasi hanya 20.000 film.
-- Menggunakan TF-IDF Vectorizer untuk menjadi representasi genre dari film
+- Menggunakan TF-IDF Vectorizer untuk menghitung seberapa penting sebuah kata tarhadap seluruh kata. Nilai yang diperoleh akan digunakan untuk merepresentasikan genre film tersebut.
 
 ## Modeling
 Sistem rekomendasi film dibuat menggunakan pendekatan Content Based Filtering. Pendekatan ini menggunakan genre film untuk menentukan rekomendasi film yang memiliki genre paling serupa dengan film yang ditentukan pengguna.
 
 **Tahapan yang dilakukan adalah**: 
 
-- Tahap selanjutnya menggunakan cosine similarity untuk menemukan kecocokan antar film berdasarkan genrenya.
-- Kemudian dibuat fungsi rekomendasi yang akan mengurutkan 5 film paling mirip dengan film yang ditentukan pengguna
-- Kelebihan pendekatan ini adalah kesederhanaannya yang tetap memberikan hasil optimal.
+- Menggunakan cosine similarity untuk menemukan kecocokan antar film berdasarkan genrenya. Metode ini dapat mengukur kemiripan data berdasarkan nilai cosinus representasi vektor dari data yang dibandingkan.
+- Dibuat fungsi rekomendasi yang akan mengurutkan 5 film paling mirip dengan film yang ditentukan pengguna
+- Kelebihan pendekatan ini adalah kesederhanaan tanpa membutuhkan komputasi yang rumit namun tetap memberikan hasil optimal.
+
+Berikut adalah rekomendasi berdasarkan film pilihan:
+|Film Uji | Genre|
+|---------|------|
+|Toy Story (1995)| Adventure, Animation, Children, Comedy, Fantasy|
+
+|No|Rekomendasi|Genre|
+|--|-----------|-----|
+|1|Emperor's New Groove, The (2000)|Adventure, Animation, Children, Comedy, Fantasy|
+|2|Asterix and the Vikings (Astérix et les Vikings) (2006)|Adventure, Animation, Children, Comedy, Fantasy|
+|3|Monsters, Inc. (2001)|Adventure, Animation, Children, Comedy, Fantasy|
+|4|Tale of Despereaux, The (2008)|Adventure, Animation, Children, Comedy, Fantasy|
+|5|Toy Story 2 (1999)|Adventure, Animation, Children, Comedy, Fantasy|
+
+
+|Film Uji | Genre|
+|---------|------|
+|Waiting to Exhale (1995)| Comedy, Drama, Romance|
+
+|No|Rekomendasi|Genre|
+|--|-----------|-----|
+|1|World According to Garp, The (1982)|Comedy, Drama, Romance|
+|2|Battle in Heaven (Batalla en el cielo) (2005)|Comedy, Drama, Romance|
+|3|Quality Street (1937)|Comedy, Drama, Romance|
+|4|Bombshell (1933)|Comedy, Drama, Romance|
+|5|Friends with Money (2006)	|Comedy, Drama, Romance|
+
 
 ## Evaluation
 Dilakukan pengujian menggunkan film  Toy Story (1995) dengan genres Adventure|Animation|Children|Comedy|Fantasy. Rekomendasi yg diberikan adalah Shrek the Third (2007),  Asterix and the Vikings (Astérix et les Vikings) (2006), DuckTales: The Movie - Treasure of the Lost Lamp (1990), Emperor's New Groove, The (2000), 	Wild, The (2006). Seluruh hasil rekomendasi meiliki genre yang sama dengan film Toy Story (1995).
