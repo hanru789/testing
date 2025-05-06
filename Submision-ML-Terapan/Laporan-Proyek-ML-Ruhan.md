@@ -32,11 +32,30 @@ Tujuan dari proyek ini adalah membangun sistem rekomendasi berbasis machine lear
 
 
 ## Data Understanding
-Dataset yang digunkan adalah [MovieLens full 25-million recommendation data 🎬](https://www.kaggle.com/datasets/patriciabrezeanu/movielens-full-25-million-recommendation-data), hasil rating dan tagging dari situs MovieLens, sebuah layanan rekomendasi film. Data terdiri dari 25.000.095 ratings dan 1.093.360 tag pada 62.423 film. Data ini dibuat oleh 162.541 users dari 09 Januari 1995sampai 21 November 2019.
+Dataset yang digunkan adalah MovieLens full 25-million recommendation data 🎬 yang dapat didownload [di sini](https://www.kaggle.com/datasets/patriciabrezeanu/movielens-full-25-million-recommendation-data). Data ini merupakan hasil rating dan tagging dari situs MovieLens, sebuah layanan rekomendasi film. Data terdiri dari 25.000.095 ratings dan 1.093.360 tag pada 62.423 film. Data ini dibuat oleh 162.541 users dari 09 Januari 1995sampai 21 November 2019.
 
-file yang digunakan dalam project ini adaah movie.csv. File ini terdiri dari variabel movieId, title, dan genres.
+Data ini terbagi menjadi enam dataset sebagai berikut:
+- movies.csv
+  
+File ini terdiri dari 62.423 baris dan tiga fitur (movieId, title, dan genres). Dataset ini tidak memiliki missing values dan data duplikat. Pada kolom genres ada 5.062 film yang tidak memiliki list genre.
 
-Word cloud genre-image
+- ratings.csv
+
+File ini terdiri adri 25.000.095 baris data yang berisikan pemberian rating terhadap film oleh user. Dataset ini tidak memliki missing values dan data duplikat. Terdapat empat fitur dari dataset ini yaitu userId, movieId, rating, dan timestapm.
+
+- tags.csv
+
+Dataset ini memiliki 10.93.360 baris dan empat kolom (userId, movieId, tag, timestamp). Terdapat 16 minssing values pada kolom tag dan tidak ada data duplikasi.
+- links.csv
+
+Dataset memiliki 62.423 baris data dan tiga fitur (movieId, imdbId, tmdbId).
+terdapat 107 missing values pada  kolom tmdbId dan tidak ada duplikasi data  
+- genome-scores.csv
+
+File ini terdiri dari 15.584.448 baris data dan tiga kolom (movieId, tagId, relevance). File ini tidak memiliki missing values dan data duplikasi.
+- genome-tags.csv
+
+Dataset ini terdiri dari 1.128 baris data dan dua kolom(tagId dan tag). file ini tidak memiliki missing values dan data duplikasi.
 
 ## Data Preparation
 Ada beberapa hal yang harus dilakukan untuk mempersiapkan data agar dapat diolah dan memberikan insight maksimal. 
@@ -44,13 +63,13 @@ Ada beberapa hal yang harus dilakukan untuk mempersiapkan data agar dapat diolah
 **Tahap persiapan data dilakukan sebagai berikut**: 
 - Terdapat 5.062 film yang tidak memiliki genre (no genres listed). Karena jumlahnya yang tidak signifikan maka dapat di drop.
 - Karena keterbatasan RAM dari perangkat yang digunakan, film yang digunakan dibatasi hanya 20.000 film.
-
+- Menggunakan TF-IDF Vectorizer untuk menjadi representasi genre dari film
 
 ## Modeling
 Sistem rekomendasi film dibuat menggunakan pendekatan Content Based Filtering. Pendekatan ini menggunakan genre film untuk menentukan rekomendasi film yang memiliki genre paling serupa dengan film yang ditentukan pengguna.
 
 **Tahapan yang dilakukan adalah**: 
-- Menggunakan TF-IDF Vectorizer untuk menjadi representasi genre dari film
+
 - Tahap selanjutnya menggunakan cosine similarity untuk menemukan kecocokan antar film berdasarkan genrenya.
 - Kemudian dibuat fungsi rekomendasi yang akan mengurutkan 5 film paling mirip dengan film yang ditentukan pengguna
 - Kelebihan pendekatan ini adalah kesederhanaannya yang tetap memberikan hasil optimal.
