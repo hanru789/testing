@@ -12,23 +12,23 @@ Industri per-film-an telah berkembang sangat pesat selama 20 tahun terakhir. Pro
 
 ## Business Understanding
 
-Banyaknya jumlah konten film dapat menimbulkan kebingungan pengguna untuk menentukan pilihan. Hal ini memungkinkan pengguna untuk menghabiskan banyak waktu dalam menentukan pilihan atau bahkan tidak jadi menggunakan layanan untuk menonton film. Permasalahan inilah yang akan dijawab menggunakan sistem rekomendasi. Sistem ini akan merekomendasikan film yang sesuai dengan preferensi pengguna sehingga pengguna tidak perlu kebingungan dan menghabiskan waktu cukup lama untuk menentukan pilihan film yang akan ditonton.
+Industri hiburan, khususnya layanan streaming film dan video on-demand, semakin berkembang pesat. Platform seperti Netflix, Disney+, dan Amazon Prime menawarkan ribuan judul film, membuat pengguna sering kesulitan memilih tontonan yang sesuai dengan preferensi mereka. Dalam situasi ini, sistem rekomendasi menjadi sangat penting untuk meningkatkan pengalaman pengguna dengan memberikan saran film yang relevan dan personal.
 
 
 ### Problem Statements
 
-Permasalahan yang dihadapi adalah:
-- Pengguna kesulitan menentukan film dikarenakan jumlah pilihan yang sangat banyak.
-- Pengguna kesulitan menemukan film yang sesuai dengan preferensinya
-- Pengguna kesulitan menemukan film dengan genre yang mirip dengan film yang pernah ditonton sebelumnya
+Pengguna sering merasa kewalahan dengan banyaknya pilihan film yang tersedia, sehingga tidak dapat dengan mudah menemukan film yang sesuai dengan selera mereka. Selain itu, platform penyedia layanan hiburan juga menghadapi tantangan dalam menjaga keterlibatan dan loyalitas pengguna jika tidak mampu menyajikan konten yang relevan secara konsisten.
 
 ### Goals
 
-Proyek ini dapat memberikan jawaban sebagai berikut:
-- Memberikan rekomendasi film kepada penguna
-- Memudahkan pengguna mencari film yang sesuai dengan preferensinya
-- Merekomendasikan film yang mirip dengan film yang pernah disukai pengguna
-- Menggunakan pendekatan Content Based Filtering. Ide dari sistem rekomendasi berbasis konten (content-based filtering) adalah merekomendasikan item yang mirip dengan item yang disukai pengguna di masa lalu.
+Tujuan dari proyek ini adalah membangun sistem rekomendasi berbasis machine learning yang dapat menyarankan film kepada pengguna berdasarkan preferensi mereka terhadap film-film sebelumnya. Dengan sistem ini, diharapkan:
+- Pengalaman pengguna menjadi lebih personal dan memuaskan.
+- Waktu pencarian film dapat dikurangi.
+- Keterlibatan pengguna terhadap platform meningkat.
+- Meningkatkan rata-rata waktu tonton per pengguna per sesi.
+- Mengurangi bounce rate atau exit rate pada halaman pencarian film.
+- Meningkatkan jumlah film yang ditonton berdasarkan hasil rekomendasi sistem.
+
 
 
 ## Data Understanding
