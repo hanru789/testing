@@ -24,7 +24,6 @@ Pengguna sering merasa kewalahan dengan banyaknya pilihan film yang tersedia, se
 Tujuan dari proyek ini adalah membangun sistem rekomendasi berbasis machine learning yang dapat menyarankan film kepada pengguna berdasarkan preferensi mereka terhadap film-film sebelumnya. Dengan sistem ini, diharapkan:
 - Pengalaman pengguna menjadi lebih personal dan memuaskan.
 - Waktu pencarian film dapat dikurangi.
-- Keterlibatan pengguna terhadap platform meningkat.
 - Meningkatkan rata-rata waktu tonton per pengguna per sesi.
 - Mengurangi bounce rate atau exit rate pada halaman pencarian film.
 - Meningkatkan jumlah film yang ditonton berdasarkan hasil rekomendasi sistem.
@@ -102,12 +101,11 @@ Berikut adalah rekomendasi berdasarkan film pilihan:
 
 
 ## Evaluation
-Dilakukan pengujian menggunkan film  Toy Story (1995) dengan genres Adventure|Animation|Children|Comedy|Fantasy. Rekomendasi yg diberikan adalah Shrek the Third (2007),  Asterix and the Vikings (Astérix et les Vikings) (2006), DuckTales: The Movie - Treasure of the Lost Lamp (1990), Emperor's New Groove, The (2000), 	Wild, The (2006). Seluruh hasil rekomendasi meiliki genre yang sama dengan film Toy Story (1995).
+Evaluasi terhadap model dilakukan dengan menghitung presisi genre film referensi user dan genre film rekomendasi. Setelah dilakukan pengujian menggunakan 100 referensi film yang dipilih secara acak, diperoleh nilai presisi 100%
 
-Pengujian kedua dilakukan dengan film Waiting to Exhale (1995) dengan genres Comedy|Drama|Romance. Rekomendasi yang diberikan adalah Kal Ho Naa Ho (2003), Walking and Talking (1996), Creator (1985), Racing with the Moon (1984), Last Holiday (1950). Seluruh hasil rekomendasi memiliki genre yang sama dengan film Waiting to Exhale (1995)
+Sistem rekomendasi yang dihasilkan memiliki akurasi yang sangat tinggi. Hal ini akan memudahkan dan mempersingkat waktu pengguna untuk memilih film yang sesuai dengan film referensinya. Hal ini tentunya juga akan meningkatkan loyalitas pengguna karena kemudahan yang ditawarkan dalam menentukan film yang akan dipilih. Ini juga akan berdampak pada meningkatnya rata-rata waktu tonton per penggunda dan mengurangi exit rate pada halaman pencarian film. Pada akhirnya ini akan berimpikasi pada meningkatnya jumlah film yang ditonton berdasarkan hasil rekomendasi sistem.
 
-Berdasarkan Dua kali pengujian tersebut dapat disimpulkan bahwa model yang dhaslkan memiliki akurasi 100%.
-
+Pada akhirnya daat disimpulkan bahwa projek ini dapat menjadi solusi dari permasalahan-permasalahan bisnis yang telah disampaikan di atas. Pada prinsipnya bisnis hiburan film tidak hanya berfokus pada penyediaan film-film berkualitas, namun juga memberikan layanan yang memudahkan pengguna menemukan film berkualitas yang sesuai dengan preferensinya.
 
 ## Reverences
 [1] R. A. Abarja, “Movie Rating Prediction using Convolutional Neural Network based on Historical Values,” International Journal of Emerging Trends in Engineering Research, vol. 8, no. 5, pp. 2156–2164, 2020, https://doi.org/10.30534/ijeter/2020/109852020.
