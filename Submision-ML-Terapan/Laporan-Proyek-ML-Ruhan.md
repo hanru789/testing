@@ -75,7 +75,7 @@ Dataset ini memiliki 10.93.360 baris dan empat kolom (userId, movieId, tag, time
 
 - tag
 
-1.093.344 baris data tag adalah metadata yang dibuat pengguna tentang film. Setiap tag biasanya berupa satu kata atau frasa pendek. Arti, nilai, dan tujuan tag tertentu ditentukan oleh setiap pengguna. Terdapat 16 missing values pada fiture ini
+1.093.344 baris data tag adalah metadata yang dibuat pengguna tentang film. Setiap tag biasanya berupa satu kata atau frasa pendek. Arti, nilai, dan tujuan tag tertentu ditentukan oleh setiap pengguna. Terdapat 16 missing values pada fiture ini sehingga dilakukan drop terhadap data missing tersebut.
 - timestamp
 
 1.093.359  data timestapm mewakili detik sejak tengah malam Waktu Universal Terkoordinasi (UTC) tanggal 1 Januari 1970.
@@ -123,7 +123,7 @@ Dataset ini terdiri dari 1.128 baris data dan dua kolom(tagId dan tag). file ini
 Ada beberapa hal yang harus dilakukan untuk mempersiapkan data agar dapat diolah dan memberikan insight maksimal. 
 
 **Tahap persiapan data dilakukan sebagai berikut**: 
-- Terdapat 5.062 film yang tidak memiliki genre (no genres listed). Karena jumlahnya yang tidak signifikan maka dapat di drop.
+- Terdapat 5.062 film yang tidak memiliki genre (no genres listed). Karena jumlahnya yang tidak signifikan maka yang digunakan hanyalah daata film yang memiliki genre.
 - Karena keterbatasan RAM dari perangkat yang digunakan, film yang digunakan dibatasi hanya 20.000 film.
 - Menggunakan TF-IDF Vectorizer untuk menghitung seberapa penting sebuah kata tarhadap seluruh kata. Nilai yang diperoleh akan digunakan untuk merepresentasikan genre film tersebut.
 
