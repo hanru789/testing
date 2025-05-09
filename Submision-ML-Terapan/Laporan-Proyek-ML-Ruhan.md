@@ -143,11 +143,11 @@ Berikut adalah rekomendasi berdasarkan film pilihan:
 
 |No|Rekomendasi|Genre|
 |--|-----------|-----|
-|1|Emperor's New Groove, The (2000)|Adventure, Animation, Children, Comedy, Fantasy|
+|1|Shrek the Third (2007)	|Adventure, Animation, Children, Comedy, Fantasy|
 |2|Asterix and the Vikings (Astérix et les Vikings) (2006)|Adventure, Animation, Children, Comedy, Fantasy|
-|3|Monsters, Inc. (2001)|Adventure, Animation, Children, Comedy, Fantasy|
-|4|Tale of Despereaux, The (2008)|Adventure, Animation, Children, Comedy, Fantasy|
-|5|Toy Story 2 (1999)|Adventure, Animation, Children, Comedy, Fantasy|
+|3|DuckTales: The Movie - Treasure of the Lost Lamp (1990)	|Adventure, Animation, Children, Comedy, Fantasy|
+|4|Emperor's New Groove, The (2000)	|Adventure, Animation, Children, Comedy, Fantasy|
+|5|Wild, The (2006)	|Adventure, Animation, Children, Comedy, Fantasy|
 
 
 |Film Uji | Genre|
@@ -156,11 +156,11 @@ Berikut adalah rekomendasi berdasarkan film pilihan:
 
 |No|Rekomendasi|Genre|
 |--|-----------|-----|
-|1|World According to Garp, The (1982)|Comedy, Drama, Romance|
-|2|Battle in Heaven (Batalla en el cielo) (2005)|Comedy, Drama, Romance|
-|3|Quality Street (1937)|Comedy, Drama, Romance|
-|4|Bombshell (1933)|Comedy, Drama, Romance|
-|5|Friends with Money (2006)	|Comedy, Drama, Romance|
+|1|Kal Ho Naa Ho (2003)	|Comedy, Drama, Romance|
+|2|Walking and Talking (1996)	|Comedy, Drama, Romance|
+|3|Creator (1985)	|Comedy, Drama, Romance|
+|4|Racing with the Moon (1984) |Comedy, Drama, Romance|
+|5|Last Holiday (1950) |Comedy, Drama, Romance|
 
 
 ## Evaluation
