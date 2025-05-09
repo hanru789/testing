@@ -34,27 +34,90 @@ Tujuan dari proyek ini adalah membangun sistem rekomendasi berbasis machine lear
 Dataset yang digunkan adalah MovieLens full 25-million recommendation data 🎬 yang dapat didownload [di sini](https://www.kaggle.com/datasets/patriciabrezeanu/movielens-full-25-million-recommendation-data). Data ini merupakan hasil rating dan tagging dari situs MovieLens, sebuah layanan rekomendasi film. Data terdiri dari 25.000.095 ratings dan 1.093.360 tag pada 62.423 film. Data ini dibuat oleh 162.541 users dari 09 Januari 1995sampai 21 November 2019.
 
 Data ini terbagi menjadi enam dataset sebagai berikut:
-- movies.csv
+### movies.csv
   
-File ini terdiri dari 62.423 baris dan tiga fitur (movieId, title, dan genres). Dataset ini tidak memiliki missing values dan data duplikat. Pada kolom genres ada 5.062 film yang tidak memiliki list genre.
+File ini terdiri dari 62.423 baris. Dataset ini tidak memiliki missing values dan data duplikat. Pada kolom genres ada 5.062 film yang tidak memiliki list genre. Uraian fiture yang terdapat pada dataset ini adalah:
+- movieId
 
-- ratings.csv
+62.423 identitas film yang digunakan untuk mempermudah pengolahan data. Id ini dimulai dari 1 - 209.171.
+- title
 
-File ini terdiri adri 25.000.095 baris data yang berisikan pemberian rating terhadap film oleh user. Dataset ini tidak memliki missing values dan data duplikat. Terdapat empat fitur dari dataset ini yaitu userId, movieId, rating, dan timestapm.
+62.423 judul film besertatahun rilisnya
+- genres
 
-- tags.csv
+62.423 pengkategorian genre film dimulai dari genre tunggal, kombinasi beberapa genre, dan "no genres listed".
 
-Dataset ini memiliki 10.93.360 baris dan empat kolom (userId, movieId, tag, timestamp). Terdapat 16 minssing values pada kolom tag dan tidak ada data duplikasi.
-- links.csv
+### ratings.csv
+
+File ini terdiri adri 25.000.095 baris data yang berisikan pemberian rating terhadap film oleh user. Dataset ini tidak memliki missing values dan data duplikat. Uraian fiture yang terdapat pada dataset ini adalah:
+- userId
+
+25.000.094 baris data identitas user yang terdiri dari Id 1 - 162541.
+- movieId
+
+62.423 identitas film yang digunakan untuk mempermudah pengolahan data. Id ini dimulai dari 1 - 209.171.
+- rating
+
+25.000.094 baris nilai rating diberikan pada skala 5 bintang, dengan penambahan setengah bintang (0,5 bintang - 5,0 bintang).
+- timestapm
+
+timestapm mewakili detik sejak tengah malam Waktu Universal Terkoordinasi (UTC) tanggal 1 Januari 1970.
+
+### tags.csv
+
+Dataset ini memiliki 10.93.360 baris dan empat kolom (userId, movieId, tag, timestamp). Terdapat 16 minssing values pada kolom tag dan tidak ada data duplikasi. Uraian fiture yang terdapat pada dataset ini adalah:
+- userId
+
+25.000.094 baris data identitas user yang terdiri dari Id 1 - 162541.
+- movieId
+
+62.423 identitas film yang digunakan untuk mempermudah pengolahan data. Id ini dimulai dari 1 - 209.171.
+
+- tag
+
+1.093.344 baris data tag adalah metadata yang dibuat pengguna tentang film. Setiap tag biasanya berupa satu kata atau frasa pendek. Arti, nilai, dan tujuan tag tertentu ditentukan oleh setiap pengguna. Terdapat 16 missing values pada fiture ini
+- timestamp
+
+1.093.359  data timestapm mewakili detik sejak tengah malam Waktu Universal Terkoordinasi (UTC) tanggal 1 Januari 1970.
+
+
+### links.csv
 
 Dataset memiliki 62.423 baris data dan tiga fitur (movieId, imdbId, tmdbId).
-terdapat 107 missing values pada  kolom tmdbId dan tidak ada duplikasi data  
-- genome-scores.csv
+terdapat 107 missing values pada  kolom tmdbId dan tidak ada duplikasi data. Uraian fiture yang terdapat pada dataset ini adalah:
+- movieId
 
-File ini terdiri dari 15.584.448 baris data dan tiga kolom (movieId, tagId, relevance). File ini tidak memiliki missing values dan data duplikasi.
-- genome-tags.csv
+62.423 identitas film yang digunakan untuk mempermudah pengolahan data. Id ini dimulai dari 1 - 209.171.
+- imdbId
 
-Dataset ini terdiri dari 1.128 baris data dan dua kolom(tagId dan tag). file ini tidak memiliki missing values dan data duplikasi.
+imdbId adalah pengenal untuk film yang digunakan oleh <http://www.imdb.com>. Misalnya, film Toy Story memiliki tautan <http://www.imdb.com/title/tt0114709/>.
+- tmdbId
+
+tmdbId adalah pengenal untuk film yang digunakan oleh <https://www.themoviedb.org>. Misalnya, film Toy Story memiliki tautan <https://www.themoviedb.org/movie/862>. Terdapat 107 missing values pada fitur ini.
+### genome-scores.csv
+
+File ini terdiri dari 15.584.448 baris data dan tiga kolom (movieId, tagId, relevance). File ini tidak memiliki missing values dan data duplikasi. Uraian fiture yang terdapat pada dataset ini adalah:
+- movieId
+
+62.423 identitas film yang digunakan untuk mempermudah pengolahan data. Id ini dimulai dari 1 - 209.171.
+
+- tagId
+
+1.093.344 baris data tag adalah metadata yang dibuat pengguna tentang film. Setiap tag biasanya berupa satu kata atau frasa pendek. Arti, nilai, dan tujuan tag tertentu ditentukan oleh setiap pengguna. Terdapat 16 missing values pada fiture ini
+
+- relevance
+
+Berdasarkan paper yang dapat didownload [di sini](http://files.grouplens.org/papers/tag_genome.pdf), genom tag mengodekan seberapa kuat film menunjukkan sifat-sifat tertentu yang direpresentasikan oleh tag (atmosferik, menggugah pikiran, realistis, dll.). Genom tag dihitung menggunakan algoritma machine learinng pada feedback yang diberikan user termasuk tag, peringkat, dan ulasan tekstual.
+### genome-tags.csv
+
+Dataset ini terdiri dari 1.128 baris data dan dua kolom(tagId dan tag). file ini tidak memiliki missing values dan data duplikasi. Uraian fiture yang terdapat pada dataset ini adalah:
+- tagId
+
+1.093.344 baris data tag adalah metadata yang dibuat pengguna tentang film. Setiap tag biasanya berupa satu kata atau frasa pendek. Arti, nilai, dan tujuan tag tertentu ditentukan oleh setiap pengguna. Terdapat 16 missing values pada fiture ini
+
+- tag
+
+1.093.344 baris data tag adalah metadata yang dibuat pengguna tentang film. Setiap tag biasanya berupa satu kata atau frasa pendek. Arti, nilai, dan tujuan tag tertentu ditentukan oleh setiap pengguna. Terdapat 16 missing values pada fiture ini
 
 ## Data Preparation
 Ada beberapa hal yang harus dilakukan untuk mempersiapkan data agar dapat diolah dan memberikan insight maksimal. 
